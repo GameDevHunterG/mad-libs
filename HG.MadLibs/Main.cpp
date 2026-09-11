@@ -9,8 +9,8 @@ using namespace std;
 
 struct Entry
 {
-	string type;
-	string input;
+	string Type;
+	string Input;
 };
 
 int main()
@@ -34,6 +34,17 @@ int main()
 		{"exclamation", ""},
 		{"adverb", ""}
 	};
+
+	for (int i = 0; i < NUM_ENTRIES; i++)
+	{
+		char firstLetter = entries[i].Type[0];
+		bool isVowel = (firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u');
+
+		if (isVowel) cout << (i + 1) << ". Enter an " << entries[i].Type << ": ";
+		else cout << (i + 1) << ". Enter a " << entries[i].Type << ": ";
+
+		cin >> entries[i].Input;
+	}
 
 	(void)_getch();
 	return 0;
