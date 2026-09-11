@@ -46,6 +46,31 @@ int main()
 		cin >> entries[i].Input;
 	}
 
+	char reply;
+	bool isY, isN;
+	do 
+	{
+		cout << "Do you want to fix any mistakes? ";
+		reply = _getch();
+		cout << reply << "\n";
+		isY = (reply == 'y' || reply == 'Y');
+		isN = (reply == 'n' || reply == 'N');
+		if (isY)
+		{
+			int i;
+			cout << "Which entry would you like to fix? ";
+			cin >> i;
+
+			char firstLetter = entries[(i - 1)].Type[0];
+			bool isVowel = (firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u');
+
+			if (isVowel) cout << i << ". Enter an " << entries[(i - 1)].Type << ": ";
+			else cout << i << ". Enter a " << entries[(i - 1)].Type << ": ";
+
+			cin >> entries[(i - 1)].Input;
+		}
+	} while (!isN);
+
 	(void)_getch();
 	return 0;
 }
