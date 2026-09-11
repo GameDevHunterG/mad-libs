@@ -71,6 +71,23 @@ int main()
 		}
 	} while (!isN);
 
+	cout << "The Ultimate Video Game Quest\n\n";
+	cout << "One day, I booted up my favorite video game and discovered a " << entries[0].Input << " portal inside the main menu.\n";
+	cout << "Without thinking twice, I grabbed my " << entries[1].Input << " and decided to " << entries[2].Input 
+		 << " straight into it.\n";
+	cout << "On the other side, I found myself in a " << entries[3].Input << " kingdom filled with hundreds of " 
+		 << entries[4].Input << ".\n";
+	cout << "Suddenly, a giant " << entries[5].Input << " appeared in front of me and shouted, \"" << entries[6].Input << "!\"\n";
+	cout << "I tried " << entries[7].Input << " away, but the mysterious creature chased me all the way to " 
+		 << entries[8].Input << ".\n";
+	cout << "There, I discovered that I had only " << entries[9].Input << " seconds to save the world!\n";
+	cout << "Just when everything seemed hopeless, a " << entries[10].Input << " hero named " << entries[11].Input 
+		 << " appeared, carrying a powerful " << entries[12].Input << ".\n";
+	cout << "\"" << entries[13].Input << "\" the hero yelled.\n";
+	cout << "Together, we defeated the final boss and saved the game world. I returned home and " << entries[14].Input
+		 << " turned off my console.\n";
+	cout << "\nThe End.\n";
+
 	(void)_getch();
 	return 0;
 }
